@@ -19,7 +19,7 @@ const Home = () => {
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
             {techItems.map(TechData => (
                 <div key={TechData._id} className='border text-black px-4 py-2 rounded mt-4'>
-                    <img src={TechData.image} alt={TechData.title} className='w-full h-40 object-cover'/>
+                    <img src={TechData.image} alt={TechData.title} className='w-full h-50 object-cover'/>
                     <div className='p-4'>
                         <h2 className='text-lg font-semibold mt-2'>{TechData.title}</h2>
                         <h3 className='text-lg font-semibold '>{TechData.brand}</h3>

@@ -30,7 +30,7 @@ const TechData = () => {
           <div /* to={`tech/${techData._id}`}  */
           key={techData._id} 
           className="border p-4 rounded shadow">
-            <img src={techData.image} alt={techData.title} className="w-full h-40 object-cover" />
+            <img src={techData.image} alt={techData.title} className="w-full h-50 object-cover" />
             <div className='p-4'>
                 <h2 className="text-lg font-bold mt-2">{techData.title}</h2>
                 <h3 className='text-lg '><b>Brand: </b>{techData.brand}</h3>
