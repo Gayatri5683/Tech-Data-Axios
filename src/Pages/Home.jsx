@@ -23,7 +23,8 @@ const Home = () => {
                     <div className='p-4'>
                         <h2 className='text-lg font-semibold mt-2'>{TechData.title}</h2>
                         <h3 className='text-lg font-semibold '>{TechData.brand}</h3>
-                        <p className='text-sm text-gray-800'><b>₹</b>{TechData.price}</p>
+                        <p className='text-sm text-gray-800'><b>${TechData.price}</b></p>
+                        <p className='text-sm text-gray-600 line-through'>${TechData.oldPrice}</p>
                         {/* <p className='text-sm text-gray-600'> {TechData.ratings}</p> */}
                     </div>
                     <Link to={`/tech/${TechData._id}`} className='bg-red-400 text-black px-4 py-2 rounded mt-4 block text-center'>

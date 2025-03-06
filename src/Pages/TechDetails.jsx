@@ -32,21 +32,25 @@ const TechDetails = () => {
 
   return (
     <div className='container mx-auto p-4'>
-        <div /* className=' rounded-lg  ' */>
+        <div className=' rounded-lg  w-full flex justify-center items-center'>
             <img src={techData.image} alt={techData.title} className='w-[40%] h-[40%] object-cover'/>
-            <div className='p-4 relative -mt-130 w-[40%] ml-170  ' >
+            <div className='p-4 relative  w-[40%]  ' >
                 <h2 className='text-3xl font-bold'>{techData.title}</h2>
                 <p className='mt-2'>{techData.description}</p>
-                <h3 className='text-lg mt-2 font-semibold'>Brand: {techData.brand}</h3>
-                <p className='mt-2 text-lg font-bold'>{techData.category}</p>
-                <p className='text-sm mt-2 text-gray-800'><b>Price: ₹</b>{techData.price}</p>
-                
+                <h3 className='text-lg mt-1'><b>Brand: </b>{techData.brand}</h3>
+                <h3 className='text-lg '><b>Category: </b>{techData.category}</h3>
+                <p className='text-sm mt-2 text-gray-800'><b> ${techData.price}</b></p>
+                <p className='text-sm mt-2 text-gray-600 line-through'>${techData.oldPrice}</p>
+                <p className="text-sm mt-2 ">
+        {techData.isNew ? <span className="text-blue-500 font-semibold">New Arrival!</span> : null}
+      </p>
                 
                 {/* <p className='mt-2'>{techData.rating}</p> */}
-                </div>
-                <div className='mt-20 mb-15 items-center justify-center flex'>
+                <div className='mt-8'>
                     <Link to='/' className='bg-red-400 text-black px-4 py-2 rounded'>Go Back</Link>
                 </div>
+                </div>
+                
         </div>
     </div>
   )
